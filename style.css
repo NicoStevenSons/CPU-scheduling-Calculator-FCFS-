@@ -1,0 +1,206 @@
+/* Modern CSS for FCFS Scheduling Calculator */
+
+:root {
+    --primary-color: #4f46e5;
+    --secondary-color: #10b981;
+    --accent-color: #f59e0b;
+    --background-color: #f8fafc;
+    --card-background: #ffffff;
+    --text-color: #1f2937;
+    --border-color: #e5e7eb;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, var(--background-color) 0%, #e2e8f0 100%);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: var(--card-background);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    max-width: 900px;
+    width: 100%;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+h3 {
+    color: var(--text-color);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background: linear-gradient(135deg, var(--primary-color), #6366f1);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tbody tr:hover {
+    background-color: #f9fafb;
+    transition: var(--transition);
+}
+
+input {
+    width: 80px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 20px;
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.add-btn {
+    background: #6366f1;
+
+}
+
+.add-btn:hover {
+    background: #c2c3ff;
+}
+
+.remove-btn {
+    background: #c51ff8;
+}
+
+.remove-btn:hover {
+    background: #d18bff;
+}
+
+.calc{
+    background-color: #585bff;
+}
+
+.calc:hover{
+    background-color: #8b8dff;
+}
+
+#averages {
+    background: #f3f4f6;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+#averages p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+#avgTAT, #avgWT {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+
+.gantt-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    position: relative;
+}
+
+.gantt-block {
+    box-sizing: border-box;
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; 
+}
+
+.gantt-time {
+    font-size: 12px;
+    transform: translateX(-50%);
+}
+
+
+.gantt-block:hover {
+    filter: brightness(1.1); 
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
