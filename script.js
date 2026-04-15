@@ -165,5 +165,7 @@ function removeProcess() {
     let rows = tbody.querySelectorAll('tr');
     if (rows.length > 1) {
         tbody.removeChild(rows[rows.length - 1]);
+    }else {
+    showError("At least one process is required.");
     }
 }
